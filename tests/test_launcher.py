@@ -101,6 +101,12 @@ class LauncherTests(unittest.TestCase):
         self.assertEqual(doc['requestOptions']['extraBodyProperties']['options'], ai.options(cfg))
         self.assertEqual(ai.options(cfg)['temperature'], 0.0)
 
+    def test_continue_timeout_converts_seconds_to_milliseconds(self):
+        settings = {**ai.DEFAULTS, 'timeout': 1800}
+        doc = ai.continue_config(self.model, settings, 12345)
+        self.assertEqual(doc['models'][0]['requestOptions']['timeout'], 1800000)
+        self.assertEqual(settings['timeout'], 1800)
+
     def test_wrapper_works_from_project_and_after_move(self):
         ai.install_launchers(self.root, self.state)
         moved = self.root / 'moved install'

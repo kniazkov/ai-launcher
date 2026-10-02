@@ -118,7 +118,9 @@ def continue_config(model, settings, port):
                 'temperature': settings['temperature'],
             },
             'requestOptions': {
-                'timeout': settings['timeout'],
+                # Continue CLI passes this directly to the OpenAI-compatible SDK,
+                # which expects milliseconds; our public option uses seconds.
+                'timeout': settings['timeout'] * 1000,
                 'extraBodyProperties': {'options': options(settings)},
             },
         }],
