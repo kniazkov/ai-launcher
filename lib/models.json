@@ -1,0 +1,11 @@
+{
+  "qwen2.5-coder-7b": {"tag": "qwen2.5-coder:7b", "size_gb": 4.7, "context_max": 32768},
+  "qwen2.5-coder-14b": {"tag": "qwen2.5-coder:14b", "size_gb": 9.0, "context_max": 32768},
+  "qwen2.5-coder-32b": {"tag": "qwen2.5-coder:32b", "size_gb": 20, "context_max": 32768},
+  "qwen3-8b": {"tag": "qwen3:8b", "size_gb": 5.2, "context_max": 40960},
+  "qwen3-14b": {"tag": "qwen3:14b", "size_gb": 9.3, "context_max": 40960},
+  "qwen3-coder-30b": {"tag": "qwen3-coder:30b", "size_gb": 19, "context_max": 262144},
+  "qwen3-coder-next": {"tag": "qwen3-coder-next", "size_gb": 52, "context_max": 262144},
+  "gpt-oss-120b": {"tag": "gpt-oss:120b", "size_gb": 65, "context_max": 131072},
+  "qwen3-coder-480b": {"tag": "qwen3-coder:480b", "size_gb": 290, "context_max": 262144}
+}
